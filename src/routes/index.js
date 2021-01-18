@@ -1,0 +1,15 @@
+import React from "react";
+import { Route, BrowserRouter as Router } from "react-router-dom";
+//----------------------------------------------------------------//
+import Home from "./../views/Home";
+import Login from './../views/Login'
+import PrivateRoute from './../components/PrivateRoute'
+
+export default function Routes() {
+  return (
+    <Router>
+      <Route path="/" exact component={Login} />
+      <PrivateRoute path="/home" component={Home} />
+    </Router>
+  );
+}
